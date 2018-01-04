@@ -29,8 +29,8 @@ export function* getTodos() {
 
   try {
     // Call our request helper (see 'utils/request')
-    const repos = yield call(request, requestURL, options);
-    console.log('repos', repos);
+    // const repos = yield call(request, requestURL, options);
+    // console.log('repos', repos);
     // yield put(reposLoaded(repos, username));
   } catch (err) {
     // yield put(repoLoadingError(err));
@@ -45,5 +45,5 @@ export default function* githubData() {
   // By using `takeLatest` only the result of the latest API call is applied.
   // It returns task descriptor (just like fork) so we can continue execution
   // It will be cancelled automatically on component unmount
-  yield takeLatest(ADD_TODO, getTodos);
+  // yield takeLatest('', getTodos);
 }
